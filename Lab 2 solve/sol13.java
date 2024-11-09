@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class CurrencyConverter {
+public class sol13 {
     public static void main(String[] args) {
         String rateStr = JOptionPane.showInputDialog(null, "Enter the exchange rate (USD to BDT):", "Exchange Rate", JOptionPane.QUESTION_MESSAGE);
         double rate = Double.parseDouble(rateStr);
