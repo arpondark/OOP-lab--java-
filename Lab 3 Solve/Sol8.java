@@ -6,7 +6,7 @@ public class Sol8 {
         System.out.print("Enter the number of students: ");
         int numberOfStudents = in.nextInt();
         in.nextLine();
-        List<Student> students = new ArrayList<>();
+        ArrayList<Student> students = new ArrayList<>();
         for (int i = 0; i < numberOfStudents; i++) {
             System.out.println("Enter name " + (i + 1) + ":");
             String name = in.nextLine();
