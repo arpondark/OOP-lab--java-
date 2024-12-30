@@ -4,7 +4,7 @@ import java.util.Scanner;
 class Student {
     private int studentId;
     private String studentName;
-    private double studentCGPA;
+    private double studentCGPA;  //solve by arpon 0112410351
 
     public Student() {}
 
