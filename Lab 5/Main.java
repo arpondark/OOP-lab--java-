@@ -1,131 +1,10 @@
+import unisystem.Student;
+import unisystem.Faculty;
+import unisystem.Course;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import Unisystem.Course;
-
-class Student {
-    private int studentId;
-    private String studentName;
-    private double studentCGPA;  //solve by arpon 0112410351
-
-    public Student() {}
-
-    public Student(int studentId, String studentName, double studentCGPA) {
-        this.studentId = studentId;
-        this.studentName = studentName;
-        this.studentCGPA = studentCGPA;
-    }
-
-    public int getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentName(String name) {
-        this.studentName = name;
-    }
-
-    public void setStudentCGPA(double cgpa) {
-        this.studentCGPA = cgpa;
-    }
-
-    @Override
-    public String toString() {
-        return "Student ID: " + studentId + ", Name: " + studentName + ", CGPA: " + studentCGPA;
-    }
-}
-
-class Faculty {
-    private int facultyId;
-    private String facultyName;
-    private String facultyPosition;
-
-    public Faculty() {}
-
-    public Faculty(int facultyId, String facultyName, String facultyPosition) {
-        this.facultyId = facultyId;
-        this.facultyName = facultyName;
-        this.facultyPosition = facultyPosition;
-    }
-
-    public int getFacultyId() {
-        return facultyId;
-    }
-
-    public void setFacultyName(String name) {
-        this.facultyName = name;
-    }
-
-    public void setFacultyPosition(String position) {
-        this.facultyPosition = position;
-    }
-
-    @Override
-    public String toString() {
-        return "Faculty ID: " + facultyId + ", Name: " + facultyName + ", Position: " + facultyPosition;
-    }
-}
-
-class Course {
-    private String courseId;
-    private String courseTitle;
-    private double credit;
-    ArrayList<Student> studentList = new ArrayList<>();
-    Faculty faculty;
-
-    public Course() {}
-
-    public Course(String courseId, String courseTitle, double credit) {
-        this.courseId = courseId;
-        this.courseTitle = courseTitle;
-        this.credit = credit;
-    }
-
-    public String getCourseId() {
-        return courseId;
-    }
-
-    public void setCourseTitle(String title) {
-        this.courseTitle = title;
-    }
-
-    public void setCredit(double credit) {
-        this.credit = credit;
-    }
-
-    public void addStudent(Student student) {
-        studentList.add(student);
-    }
-
-    public void dropStudent(int studentId) {
-        studentList.removeIf(student -> student.getStudentId() == studentId);
-    }
-
-    public void addFaculty(Faculty faculty) {
-        this.faculty = faculty;
-    }
-
-    public void dropFaculty() {
-        this.faculty = null;
-    }
-
-    public void printStudentList() {
-        if (studentList.isEmpty()) {
-            System.out.println("No students enrolled in this course.");
-        } else {
-            for (Student student : studentList) {
-                System.out.println(student);
-            }
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "Course ID: " + courseId + ", Title: " + courseTitle + ", Credit: " + credit +
-                (faculty != null ? ", Faculty: " + faculty : "");
-    }
-}
-
-public class UniversitySystem {
+public class Main {
     private static final ArrayList<Student> students = new ArrayList<>();
     private static final ArrayList<Course> courses = new ArrayList<>();
     private static final ArrayList<Faculty> faculties = new ArrayList<>();
@@ -434,3 +313,4 @@ public class UniversitySystem {
         }
     }
 }
+
