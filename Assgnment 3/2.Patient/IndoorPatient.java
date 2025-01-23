@@ -6,7 +6,7 @@ public class IndoorPatient extends Patient {
     private int bedNo;
     private double dailyFee;
 
-    // Constructor
+    
     public IndoorPatient(String name, int age, int systolic, int diastolic, double diabetesPoint,
                          LocalDate admissionDate, int bedNo, double dailyFee) {
         super(name, age, systolic, diastolic, diabetesPoint);
@@ -15,7 +15,6 @@ public class IndoorPatient extends Patient {
         this.dailyFee = dailyFee;
     }
 
-    // Getters and Setters
     public LocalDate getAdmissionDate() {
         return admissionDate;
     }
@@ -40,13 +39,12 @@ public class IndoorPatient extends Patient {
         this.dailyFee = dailyFee;
     }
 
-    // getInvoice method
     public double getInvoice() {
         long days = ChronoUnit.DAYS.between(admissionDate, LocalDate.now());
         return days * dailyFee;
     }
 
-    // toString method
+
     @Override
     public String toString() {
         return super.toString() + ", Admission Date: " + admissionDate + ", Bed No: " + bedNo +
