@@ -15,11 +15,11 @@ public class Main {
             System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
-                    // Add Fulltime Employee
+                    
                     System.out.print("Enter name: ");
                     String fullName = scanner.nextLine();
                     System.out.print("Enter ID: ");
