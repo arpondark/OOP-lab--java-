@@ -16,7 +16,7 @@ public class Patient implements Comparable<Patient> {
         this.diabetesPoint = diabetesPoint;
     }
 
-    // Getters and Setters
+    
     public String getName() {
         return name;
     }
@@ -64,7 +64,7 @@ public class Patient implements Comparable<Patient> {
                ", Diastolic: " + diastolic + ", Diabetes Point: " + diabetesPoint;
     }
 
-    // Comparable implementation for sorting by age in descending order
+    
     @Override
     public int compareTo(Patient other) {
         return Integer.compare(other.age, this.age);
